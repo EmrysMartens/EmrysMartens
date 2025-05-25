@@ -28,7 +28,7 @@ Dit zijn de servers in de Wazuh setup.
 
 ### Opzetting Wazuh server
 
-De extra stappen van deze server: 
+De extra basis stappen van deze server: 
 
 - Pak de file uit met een archiveringsprogramma zoals 7-ZIP of WinRAR.
 - Open VirtualBox, en klik 'nieuw' aan, kies Linux en Ubuntu (64-bit), kies 'volgende'.
@@ -36,36 +36,75 @@ De extra stappen van deze server:
 - Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
 
     
-### opzetting wazuh linux host
+### Opzetting wazuh linux host
+
+De extra basis stappen van deze server: 
+
+- Pak de file uit met een archiveringsprogramma zoals 7-ZIP of WinRAR.
+- Open VirtualBox, en klik 'nieuw' aan, kies Linux en Ubuntu (64-bit), kies 'volgende'.
+- Kies RAM en CPU instellingen, voorbeeld 2048 MB en één CPU, kies 'volgende'.
+- Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
 
 
+### Opzetting wazuh windows host
 
-### opzetting wazuh windows host
+De extra basis stappen van deze server: 
 
+- Open VirtualBox, en klik 'nieuw' aan, kies Microsoft Windows en Windows 10 (64-bit), kies 'volgende'.
+- Selecteer onder opties de gekozen iso voor de machine.
+- Kies RAM en CPU instellingen, voorbeeld 4096 MB en twee CPU's, kies 'volgende'.
+- Kies nieuwe vdi aanmaken, klik op machine 'aanmaken'.
+- Selecteer de iso als opstartmedium, en start op.
 
 ## Volledige opzetting Security Onion
 
-Dit zijn de servers in de Wazuh setup.
+Dit zijn de servers in de Security Onion setup.
 
 ### Opzetting Security Onion
 
-De extra stappen van deze server: 
-  ```bash
-  sudo ip link set eth0 up
-  sudo ip addr add 10.0.31.100/24 dev eth0
-  sudo ip route add default via 10.0.31.1
-  ```
+De extra basis stappen van deze server: 
 
-### opzetting Security Onion linux host
+- Download de ISO van de online documentatie SecurityOnionDocs2024.
+- Open VirtualBox, en klik 'nieuw' aan, kies Linux} en Ubuntu (64-bit), kies 'volgende'.
+- Kies RAM en CPU instellingen, 15.6 GB en 12 CPU, kies 'volgende'.
+- Kies in vdi voor nieuwe, en geef genoeg ruimte, zoals 200GB.
+- Selecteer de iso als opstartmedium, en start op.
+- Soms moet je bij error hierna in instellingen, onder 'opslag' onder 'iso' de juiste iso nogmaals selecteren.
+
+### Opzetting Security Onion linux host
+
+De extra basis stappen van deze server: 
+
+- Pak de file uit met een archiveringsprogramma zoals 7-ZIP of WinRAR.
+- Open VirtualBox, en klik 'nieuw' aan, kies Linux en Ubuntu (64-bit), kies 'volgende'.
+- Kies RAM en CPU instellingen, voorbeeld 2048 MB en één CPU, kies 'volgende'.
+- Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
+
+
+### Opzetting Security Onion windows host
+
+De extra basis stappen van deze server: 
+
+- Open VirtualBox, en klik 'nieuw' aan, kies Microsoft Windows en Windows 10 (64-bit), kies 'volgende'.
+- Selecteer onder opties de gekozen iso voor de machine.
+- Kies RAM en CPU instellingen, voorbeeld 4096 MB en twee CPU's, kies 'volgende'.
+- Kies nieuwe vdi aanmaken, klik op machine 'aanmaken'.
+- Selecteer de iso als opstartmedium, en start op.
 
 
 
-### opzetting Security Onion windows host
-  ```bash
-  sudo ip link set eth0 up
-  sudo ip addr add 10.0.31.100/24 dev eth0
-  sudo ip route add default via 10.0.31.1
-  ```
+## Opzetting Kali vm
+
+De extra basis stappen van deze server: 
+
+- Pak de file uit met een archiveringsprogramma zoals 7-ZIP of WinRAR.
+- Open VirtualBox, en klik 'nieuw' aan, kies Linux en Debian (64-bit), kies 'volgende'.
+- Kies RAM en CPU instellingen, voorbeeld 4096 MB en twee CPU's, kies 'volgende'.
+- Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
+
+
+## Aanvallen
+
 
 
 
