@@ -1,1 +1,2 @@
 # Wazuh
+lorem ipsum
