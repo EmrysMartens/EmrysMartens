@@ -35,6 +35,18 @@ De extra basis stappen van deze server:
 - Kies RAM en CPU instellingen, voorbeeld 15.6 GB en 12 CPU, kies 'volgende'.
 - Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
 
+Mogelijke nodige toevoeging:
+Soms faalt de basis config om alle juiste onderdelen in de ossec.conf toe te voegen.
+In dit geval moet in: ``` sudo nano /var/ossec/etc/ossec.conf```
+De toevoeging van 
+```
+<localfile>
+  <log_format>syslog</log_format>
+  <location>/var/log/auth.log</location>
+</localfile>
+```
+Vlak voor het ```<ruleset>``` onderdeel
+
     
 ### Opzetting wazuh linux host
 
