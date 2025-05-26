@@ -38,15 +38,20 @@ De extra basis stappen van deze server:
 
 #### Logging ssh connectie
 Soms is default de logging van een ssh connectie niet weergeven, dit kan toegevoegd worden met:
-De toevoeging in: ``` sudo nano /var/ossec/etc/ossec.conf```
+De toevoeging op de agent van: ``` sudo nano /var/ossec/etc/ossec.conf```
 Met de toevoeging van:
 ```
 <localfile>
   <log_format>syslog</log_format>
   <location>/var/log/auth.log</location>
 </localfile>
+
+<localfile>
+  <log_format>syslog</log_format>
+  <location>/var/log/syslog</location>
+</localfile>
+
 ```
-Vlak voor het ```<ruleset>``` onderdeel
 
     
 ### Opzetting wazuh linux host
