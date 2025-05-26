@@ -53,6 +53,7 @@ Met de toevoeging van:
 
 ```
 
+
     
 ### Opzetting wazuh linux host
 
