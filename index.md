@@ -37,7 +37,7 @@ De extra basis stappen van deze server:
 
 
 #### Logging ssh connectie
-Soms is default de logging van een ssh connectie niet weergeven, dit kan toegevoegd worden met:
+Soms is default de logging van een ssh connectie niet weergeven (ookal is dit default inbegrepen), dit kan toegevoegd/opgelost worden met:
 De toevoeging op de agent van: ``` sudo nano /var/ossec/etc/ossec.conf```
 Met de toevoeging van:
 ```
