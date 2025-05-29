@@ -34,11 +34,18 @@ De extra basis stappen van deze server:
 - Open VirtualBox, en klik 'nieuw' aan, kies Linux en Ubuntu (64-bit), kies 'volgende'.
 - Kies RAM en CPU instellingen, voorbeeld 15.6 GB en 12 CPU, kies 'volgende'.
 - Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
+- Ga in 'instellingen' naar 'netwerk' en zet de adapter op Bridged Adapter en start de vm.
+- Log in met gebruiker en wachtwoord ubuntu, zet de interface op en stel het adres en dg in met de commando's:
+ ```
+ sudo ip link set eth0 up
+ sudo ip addr add 192.168.192.2/24 dev eth0
+ sudo ip route add default via 192.168.192.1
+```
 
 
 #### Logging ssh connectie
-Soms is default de logging van een ssh connectie niet weergeven (ookal is dit default inbegrepen), dit kan toegevoegd/opgelost worden met:
-De toevoeging op de agent van: ``` sudo nano /var/ossec/etc/ossec.conf```
+Soms faalt de default opzet van een linux vm logging van een ssh connectie.
+Dit kan opgelost worden in: ``` sudo nano /var/ossec/etc/ossec.conf```
 Met de toevoeging van:
 ```
 <localfile>
@@ -52,8 +59,6 @@ Met de toevoeging van:
 </localfile>
 
 ```
-
-
     
 ### Opzetting wazuh linux host
 
@@ -61,9 +66,15 @@ De extra basis stappen van deze server:
 
 - Pak de file uit met een archiveringsprogramma zoals 7-ZIP of WinRAR.
 - Open VirtualBox, en klik 'nieuw' aan, kies Linux en Ubuntu (64-bit), kies 'volgende'.
-- Kies RAM en CPU instellingen, voorbeeld 2048 MB en één CPU, kies 'volgende'.
+- Kies RAM en CPU instellingen, voorbeeld 4096 MB en één CPU, kies 'volgende'.
 - Kies bestaande vdi gebruiken, en navigeer naar de gedownloade en uitgepakte file, kies 'volgende' en 'maken'.
-
+- Ga in 'instellingen' naar 'netwerk' en zet de adapter op Bridged Adapter en start de vm.
+- Log in met gebruiker en wachtwoord ubuntu, zet de interface op en stel het adres en dg in met de commando's:
+```
+sudo ip link set eth0 up
+sudo ip addr add 192.168.192.3/24 dev eth0
+sudo ip route add default via 192.168.192.1
+```
 
 ### Opzetting wazuh windows host
 
@@ -74,6 +85,9 @@ De extra basis stappen van deze server:
 - Kies RAM en CPU instellingen, voorbeeld 4096 MB en twee CPU's, kies 'volgende'.
 - Kies nieuwe vdi aanmaken, klik op machine 'aanmaken'.
 - Selecteer de iso als opstartmedium, en start op.
+- Ga in 'instellingen' naar 'netwerk' en zet de adapter op Bridged Adapter en start de vm.
+- Open een command prompt en stel het adres en dg in met de commando's:
+```netsh interface ip set address name="Ethernet" static 192.168.192.4 255.255.255.0 192.168.192.1```
 
 ## Volledige opzetting Security Onion
 
